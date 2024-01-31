@@ -42,7 +42,7 @@
 |21|Тупик Юлия |[dljulia](https://github.com/dljulia)|[210670](./trunk/PO9_210670/)|:x:|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
 |22|Тусюк Тимофей |[HuKtoHe3HaeT](https://github.com/HuKtoHe3HaeT)|[210671](./trunk/PO-9_210671/)|:x:|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
 |23|Харитонович Захар |[ZakharTS](https://github.com/ZakharTS)|[210672](./trunk/PO-9_210672/)|:x:|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
-|24|Шубич Дарья|[Dashubaa](https://github.com/Dashubaa)|[210674](./trunk/PO-9_210674)|:x:|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
+|24|Шубич Дарья|[Dashubaa](https://github.com/Dashubaa)|[210674](./trunk/PO-9_210674)|✅|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
 |25|Зайд Халдун А. Алькатури| | |:x:|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
 
 
