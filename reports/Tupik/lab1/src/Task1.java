@@ -10,7 +10,7 @@ public class Task1 {
         int count = input.nextInt();
 
         int[] arr = new int[count];
-        for (int i = 0; i < count; i++){
+        for (int i = 0; i < count; i++) {
             System.out.print("Элемент " + i + ": ");
             arr[i] = input.nextInt();
         }
@@ -18,21 +18,20 @@ public class Task1 {
         getUniqueNumbers(arr);
     }
 
-    public static void getUniqueNumbers(int[] arr){
+    public static void getUniqueNumbers(int[] arr) {
 
-        boolean[] isUnique = new boolean[arr.length];
+        int[] isUnique = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
-            isUnique[i] = true;
-            for (int j = 0; j < i; j++) {
-                if (arr[i] == arr[j]) {
-                    isUnique[i] = false;
-                }
+            for (int j = 0; j < arr.length; j++) {
+                if (arr[i] == arr[j])
+                    isUnique[i]++;
             }
         }
 
         System.out.print("Уникальные числа: ");
+
         for (int i = 0; i < arr.length; i++) {
-            if (isUnique[i])
+            if (isUnique[i] == 1)
                 System.out.print(arr[i] + " ");
         }
     }
