@@ -29,8 +29,8 @@ public class Main {
         }
 
         System.out.printf("1 задание\n");
-        lab_1_1 govno = null;
-        govno.main();
+        lab_1_1 prog_ekcemlar = null;
+        prog_ekcemlar.main();
 
     }
     public static void shiftRight(double[] array, int shift){
