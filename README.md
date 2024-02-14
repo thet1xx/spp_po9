@@ -39,7 +39,7 @@
 |18|Оводок Вадим | [Vodemus](https://github.com/Vodemus) | [210667](./trunk/PO-9_210667/)|:x:|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
 |19|Солышко Дмитрий |[dimasolyshko](https://github.com/dimasolyshko)|[210668](./trunk/PO-9_210668/)|:x:|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
 |20|Ступак Дмитрий |[Papriosa](https://github.com/Papirosa225) | [210669](./trunk/PO-9_210669/)|:x:|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
-|21|Тупик Юлия |[dljulia](https://github.com/dljulia)|[210670](./trunk/PO9_210670/)|:x:|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
+|21|Тупик Юлия |[dljulia](https://github.com/dljulia)|[210670](./trunk/PO9_210670/)|✅|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
 |22|Тусюк Тимофей |[HuKtoHe3HaeT](https://github.com/HuKtoHe3HaeT)|[210671](./trunk/PO-9_210671/)|:x:|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
 |23|Харитонович Захар |[ZakharTS](https://github.com/ZakharTS)|[210672](./trunk/PO-9_210672/)|✅|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
 |24|Шубич Дарья|[Dashubaa](https://github.com/Dashubaa)|[210674](./trunk/PO-9_210674)|✅|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
