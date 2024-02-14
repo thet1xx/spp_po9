@@ -25,7 +25,4 @@ public class Main {
         }
         return "Не равны";
     }
-
-
-
 }
