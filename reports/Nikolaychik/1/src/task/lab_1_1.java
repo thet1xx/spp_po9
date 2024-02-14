@@ -10,23 +10,23 @@ public class lab_1_1{
     public static void main() throws IOException {
         Scanner snaper = new Scanner(System.in);
         System.out.printf("введи колво чисел\n");
-        int kolvo;
+        int count;
         kolvo = new java.util.Scanner(System.in).nextInt();
-        int chislo;
-        int[] chisla = new int[kolvo];
-        System.out.printf("введи еще " + kolvo + " чисел\n");
-        Map<Integer, Integer> tablycya = new HashMap<>();
-        for (int i = 0; i < kolvo; i++) {
-            chisla[i] = snaper.nextInt();
-            if(tablycya.containsKey(chisla[i])){
-                tablycya.put(chisla[i], tablycya.get(chisla[i])+1);
+        int numer;
+        int[] numers = new int[count];
+        System.out.printf("введи еще " + count + " чисел\n");
+        Map<Integer, Integer> table = new HashMap<>();
+        for (int i = 0; i < count; i++) {
+            numers[i] = snaper.nextInt();
+            if(table.containsKey(numers[i])){
+                table.put(numers[i], table.get(numers[i])+1);
             }
             else{
-                tablycya.put(chisla[i],1);
+                table.put(numers[i],1);
             }
         }
         int max=-32000;
-        Iterator<Map.Entry<Integer, Integer>> itr = tablycya.entrySet().iterator();
+        Iterator<Map.Entry<Integer, Integer>> itr = table.entrySet().iterator();
         while(itr.hasNext()) {
             Map.Entry<Integer, Integer> entry =  itr.next();
             Integer key = entry.getKey();
@@ -35,7 +35,7 @@ public class lab_1_1{
                 max = value;
             }
         }
-        itr = tablycya.entrySet().iterator();
+        itr = table.entrySet().iterator();
         while(itr.hasNext()) {
             Map.Entry<Integer, Integer> entry =  itr.next();
             Integer key = entry.getKey();
