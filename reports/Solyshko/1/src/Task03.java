@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class Task03 {
-    // Task3
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите строку для абривиатуры: ");
@@ -12,6 +11,7 @@ public class Task03 {
 
     static String abbreviate(String str){
         String newStr = "";
+        str = str.trim();
         newStr += str.charAt(0);
         for(int i = 0; i < str.length(); i++)
         {
