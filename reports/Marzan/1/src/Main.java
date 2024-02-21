@@ -53,15 +53,25 @@ public class Main
         }
         String newStr = "";
 
+        if(Math.abs(shift) > str.length())
+        {
+            shift %= str.length();
+        }
+
         if(shift > 0)
         {
             newStr = str.substring(str.length() - shift) + str.substring(0, str.length() - shift);
         }
-        else
+        else if (shift < 0)
         {
             shift = Math.abs(shift);
             newStr = str.substring(shift) + str.substring(0, shift);
         }
+        else
+        {
+            return str;
+        }
+
         return newStr;
     }
 
@@ -130,7 +140,6 @@ public class Main
 
         System.out.println(shiftRight(str, shift));
         System.out.println(shiftRight(str, -shift));
-
         sc.close();
     }
 }
