@@ -15,7 +15,11 @@ public class Task3 {
         if (cs != null && !cs.isEmpty()) {
             for (int i = 0; i < cs.length(); i++) {
                 char ch = cs.charAt(i);
-                if (!Character.isLowerCase(ch)) return false;
+                if (!Character.isLowerCase(ch) &&
+                    !Character.isSpaceChar(ch) &&
+                    !Character.isDigit(ch) ||
+                    cs.equals(" "))
+                    return false;
             }
             return true;
         }
