@@ -21,8 +21,8 @@ public class zad_2 {
     public static double[] subarray(double[] array, int startIndex,int endIndex){
 
         double[] karray = new double[endIndex - startIndex];
-        for(int i = startIndex - 1, j = 0; i < endIndex - 1; i++, j++){
-            karray[j] = array[i];
+        for(int i = 0, j = startIndex; j < endIndex; i++, j++){
+            karray[i] = array[j];
         }
         return karray;
     }

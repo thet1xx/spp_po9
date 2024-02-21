@@ -14,7 +14,10 @@ public class zad_3 {
         int cursor;
         if(shift < 0){
             cursor = -shift;
-        }else {
+        }else if(shift > srt.length()){
+            shift %= srt.length();
+            cursor = srt.length() - shift;
+        }else{
             cursor = srt.length() - shift;
         }
         return srt.substring(cursor) + srt.substring(0, cursor);
