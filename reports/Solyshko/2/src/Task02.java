@@ -2,11 +2,10 @@ import java.io.*;
 
 public class Task02 {
     public static void main(String[] args) {
-        if (args.length < 4 || !args[0].equals("split")) {
+        if (args.length <= 2 || args.length >= 6 || !args[0].equals("split")) {
             System.out.println("Usage: java SplitUtility split [-b num | -l num] [-d] [input_file] [output_prefix]");
             System.exit(1);
         }
-
         int blockSize = 0;
         int lineCount = 10;
         boolean useNumericSuffixes = false;
@@ -46,6 +45,7 @@ public class Task02 {
             splitFile(inputFile, outputPrefix, blockSize, lineCount, useNumericSuffixes);
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
+            System.out.println("Usage: java SplitUtility split [-b num | -l num] [-d] [input_file] [output_prefix]");
             System.exit(1);
         }
     }
