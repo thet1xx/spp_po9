@@ -17,7 +17,7 @@ public class Main {
         Random random = new Random();
         if (asciiOnly) {
             for (int i = 0; i < length; ++i) {
-                int num = random.nextInt(128);
+                int num = random.nextInt(126 - 33 + 1) + 33;
                 string += (char) num;
             }
             return string;
