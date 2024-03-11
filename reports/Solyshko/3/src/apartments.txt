@@ -1,0 +1,6 @@
+2 75.5 3 First Street 123 1200.0
+3 90.0 5 Oak Avenue 456 1500.0
+1 50.0 2 Maple Lane 789 900.0
+2 80.0 4 Pine Road 101 1300.0
+2 80.0 3 Pine Road 102 1400.0
+2 80.0 6 Pine Road 102 1400.0
