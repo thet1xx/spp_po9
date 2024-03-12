@@ -38,12 +38,12 @@ public class Apartment {
     @Override
     public String toString() {
         return "Apartment{" +
-                "numberOfRooms=" + numberOfRooms +
-                ", totalArea=" + totalArea +
+                "Rooms=" + numberOfRooms +
+                ", Area=" + totalArea +
                 ", floor=" + floor +
                 ", address='" + address + '\'' +
-                ", rentPrice=" + rentPrice +
-                ", isOccupied=" + (isOccupied?"Сдана":"Сдаётся") +
+                ", Price=" + rentPrice +
+                ", " + (isOccupied?"Сдана":"Сдаётся") +
                 '}';
     }
 }

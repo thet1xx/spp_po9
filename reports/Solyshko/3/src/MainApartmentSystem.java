@@ -50,13 +50,13 @@ public class MainApartmentSystem {
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                String[] parts = line.split(" ");
-                if (parts.length == 7) {
+                String[] parts = line.split(", ");
+                if (parts.length == 5) {
                     int numberOfRooms = Integer.parseInt(parts[0]);
                     double totalArea = Double.parseDouble(parts[1]);
                     int floor = Integer.parseInt(parts[2]);
-                    String address = parts[3] + " " + parts[4];
-                    double rentPrice = Double.parseDouble(parts[5]);
+                    String address = parts[3];
+                    double rentPrice = Double.parseDouble(parts[4]);
 
                     Apartment apartment = new Apartment(numberOfRooms, totalArea, floor, address, rentPrice);
                     system.addApartment(apartment);
