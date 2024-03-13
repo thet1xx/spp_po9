@@ -63,12 +63,14 @@ class Set {
     public void remove(int element){
 
         if(this.contain(element)){
-            size--;
+
             for (int i = 0; i < this.size; i++) {
                 if(elements[i] == element){
                     for (;i < this.size; i++){
                         elements[i] = elements[i + 1];
+
                     }
+                    size--;
                 }
             }
         }
@@ -147,7 +149,8 @@ public class Zad1 {
         set4.printElements();
         Set set3 = Set.union(set1,set2);
         set3.printElements();
-        set3.remove(4);
+        set3.remove(5);
+        set3.remove(2);
         String string = set3.toString();
         System.out.println(string);
         System.out.println( set1.equals(set4));
