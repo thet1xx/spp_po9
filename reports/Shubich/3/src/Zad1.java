@@ -16,6 +16,13 @@ public class Zad1 {
     }
 
     public boolean isIsoscelesTraingle() {
+        if ((a + b > c) && (a + c > b) && (b + c > a)) {
+
+        } else {
+            System.out.println("Это не треугольник");
+            return false;
+        }
+
         if (a <= 0 || b <= 0 || c <= 0) {
             System.out.println("Стороны треугольника должны быть больше нуля и" +
                     "\n  для равнобедренного треугольника две стороны должны быть равны!");
