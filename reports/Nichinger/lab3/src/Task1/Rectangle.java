@@ -3,14 +3,20 @@ public class Rectangle {
     private double length;
     private double width;
 
+	public static boolean isValid(double length, double width){
+		return (length > 0 && width > 0);
+	} 
+
+	public boolean isValid(){
+		return (length > 0 && width > 0);
+    } 
+    
     public Rectangle(){
         this.length = 1;
         this.width = 1;
     }
 
-    public Rectangle(double length, double width) throws Exception {
-        if (length <= 0 || width <= 0)
-            throw new Exception("Length and width must be positive");
+    public Rectangle(double length, double width){
         this.length = length;
         this.width = width;
     }
