@@ -12,10 +12,13 @@ public class DoubleNumberSet {
     }
 
     public void addElement(double element) {
-        if (size < capacity) {
-            elements[size++] = element;
-        } else {
-            System.out.println("Множество полное, невозможно добавить новый элемент.");
+        if(!this.contains(element)){
+            if (size < capacity) {
+                elements[size++] = element;
+            }
+            else {
+                System.out.println("Множество полное, невозможно добавить новый элемент.");
+            }
         }
     }
 
@@ -68,7 +71,6 @@ public class DoubleNumberSet {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         DoubleNumberSet that = (DoubleNumberSet) obj;
-        if (capacity != that.capacity) return false;
         return Arrays.equals(elements, that.elements);
     }
 }

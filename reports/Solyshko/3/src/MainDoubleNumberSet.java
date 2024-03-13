@@ -6,6 +6,9 @@ public class MainDoubleNumberSet {
         set1.addElement(2.0);
         set1.addElement(3.1);
         set1.addElement(49.2);
+        set1.removeElement(3.1);
+        set1.addElement(3.0);
+        set1.addElement(2.0);
 
         System.out.println("множество set1: " + set1);
 
@@ -44,14 +47,6 @@ public class MainDoubleNumberSet {
         set3.addElement(4.0);
         set3.addElement(5.0);
         set3.addElement(6.0);
-
-        areEqual = set2.equals(set3);
-
-        if (areEqual) {
-            System.out.println("Множества set2 и set3 равны.");
-        } else {
-            System.out.println("Множества set2 и set3 не равны.");
-        }
 
         // Сделаем идентичные обьекты set3 и set4 и проверим равенство
         DoubleNumberSet set4 = new DoubleNumberSet(6);
