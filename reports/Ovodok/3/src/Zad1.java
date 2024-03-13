@@ -66,11 +66,9 @@ class Set {
             size--;
             for (int i = 0; i < this.size; i++) {
                 if(elements[i] == element){
-                    for (;i < this.capacity - 1; i++){
+                    for (;i < this.size; i++){
                         elements[i] = elements[i + 1];
                     }
-
-
                 }
             }
         }
