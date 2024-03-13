@@ -1,6 +1,8 @@
 class Set {
     private int[] elements;
     private int capacity;
+
+    private int size = 0;
     public Set() {
     }
 
@@ -50,6 +52,7 @@ class Set {
             for (int i = 0; i < this.capacity; i++) {
                 if(elements[i] == 0){
                     elements[i] = element;
+                    size++;
                     break;
                 }
             }
@@ -63,6 +66,7 @@ class Set {
             for (int i = 0; i < this.capacity; i++) {
                 if(elements[i] == element){
                     elements[i] = 0;
+                    size--;
                     break;
                 }
             }
@@ -70,12 +74,12 @@ class Set {
     }
 
     static public Set union(Set firstSet, Set secondSet) {
-        Set result = new Set(firstSet.getCapacity() + secondSet.getCapacity());
+        Set result = new Set(firstSet.getSize() + secondSet.getSize());
 
-        for (int i = 0; i < firstSet.capacity; i++) {
+        for (int i = 0; i < firstSet.size; i++) {
             result.add(firstSet.elements[i]);
         }
-        for (int i = 0; i < secondSet.capacity; i++) {
+        for (int i = 0; i < secondSet.size; i++) {
             result.add(secondSet.elements[i]);
         }
         return result;
@@ -83,14 +87,14 @@ class Set {
 
     public void printElements() {
         System.out.print("Elements: ");
-        for (int i = 0; i < this.capacity; i++) {
+        for (int i = 0; i < this.size; i++) {
             System.out.print(this.elements[i] + " ");
         }
         System.out.println();
     }
 
     public boolean equals(Set set) {
-        if (this.capacity != set.getCapacity()){
+        if (this.size != set.getSize()){
             return false;
         } else {
             for (int element: elements){
@@ -106,14 +110,21 @@ class Set {
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("[ ");
-        for (int element: elements){
-            stringBuilder.append(element);
+        for (int i = 0; i < this.size; i++){
+            stringBuilder.append(elements[i]);
             stringBuilder.append(' ');
         }
         stringBuilder.append(']');
         return stringBuilder.toString();
     }
 
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
 }
 
 public class Zad1 {
