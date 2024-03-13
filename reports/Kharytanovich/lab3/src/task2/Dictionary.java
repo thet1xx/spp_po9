@@ -38,8 +38,10 @@ public class Dictionary {
     }
 
     public DictionaryItem search(String value) {
-        return itemsByAlphabet.stream().filter(item -> item.getValueRu().equalsIgnoreCase(value)).findFirst()
+        DictionaryItem result =  itemsByAlphabet.stream().filter(item -> item.getValueRu().equalsIgnoreCase(value)).findFirst()
                 .orElse(itemsByAlphabet.stream().filter(item -> item.getValueEn().equalsIgnoreCase(value)).findFirst().orElse(null));
+        result.setRequestsAmount(item.getRequestsAmount() + 1);
+        return result;
     }
 
     public void readFile(String fileName) {

@@ -21,11 +21,11 @@ public class CustomCharArray {
         return values;
     }
 
-    public boolean add (Character character) {
-        return values.add(character);
+    public boolean add(Character character) {
+        return !values.contains(character) && values.add(character);
     }
 
-    public boolean remove (Character character) {
+    public boolean remove(Character character) {
         return values.remove(character);
     }
 
