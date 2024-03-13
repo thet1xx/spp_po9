@@ -1,0 +1,1 @@
+java -jar ./lab_2_2_spp.jar 6 ./head.txt
