@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class StatisticsUtility {
-
+    // Задание 1
     public static double calculateMean(int[] sequence) {
         int sum = 0;
         for (int num : sequence) {
@@ -20,6 +20,7 @@ public class StatisticsUtility {
         return sumSquaredDiff / sequence.length;
     }
 
+    // Задание 2
     public static void reverse(int[] array) {
         int left = 0;
         int right = array.length - 1;
@@ -34,8 +35,8 @@ public class StatisticsUtility {
         }
     }
 
+    // Задание 3
     public static boolean isPalindrome(String str) {
-        // Удаляем пробелы и приводим к нижнему регистру для корректного сравнения
         str = str.replaceAll("\\s+", "").toLowerCase();
         int left = 0;
         int right = str.length() - 1;
@@ -51,6 +52,18 @@ public class StatisticsUtility {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        // Обращение массива, переданного в аргументах командной строки
+        if (args.length > 0) {
+            int[] argSequence = new int[args.length];
+            for (int i = 0; i < args.length; i++) {
+                argSequence[i] = Integer.parseInt(args[i]);
+            }
+            System.out.println("Исходная последовательность из аргументов командной строки: " + Arrays.toString(argSequence));
+            reverse(argSequence);
+            System.out.println("Обращенная последовательность из аргументов командной строки: " + Arrays.toString(argSequence));
+        } else {
+            System.out.println("Пожалуйста, введите последовательность чисел в качестве аргументов командной строки.");
+        }
 
         // Ввод последовательности из N целых чисел
         System.out.print("Введите размер последовательности: ");
@@ -61,9 +74,9 @@ public class StatisticsUtility {
             sequence[i] = scanner.nextInt();
         }
 
+        // Вычисление среднего значения и выборочной дисперсии
         double mean = calculateMean(sequence);
         double variance = calculateVariance(sequence);
-
         System.out.println("Среднее значение: " + mean);
         System.out.println("Выборочная дисперсия: " + variance);
 
