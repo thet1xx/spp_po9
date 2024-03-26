@@ -36,14 +36,16 @@ public class Task2 {
             while (position >= 0 && lines < numberOfLines) {
                 file.seek(position);
                 char c = (char) file.read();
-                if (c == '\n') {
+                if (c == '\n' && position !=0) {
                     lines++;
                 }
                 tail.insert(0, c);
                 position--;
             }
 
-            System.out.print(tail);
+            String result = tail.toString().trim();
+            System.out.print(result);
+
         } catch (IOException e) {
             System.err.println("Error reading file: " + e.getMessage());
         }

@@ -13,11 +13,11 @@ public class Main {
             BufferedReader reader = new BufferedReader(new FileReader(fileName));
             String line;
             while ((line = reader.readLine()) != null) {
-                String[] lexemes = line.split("\\s+");
+                String[] lexemes = line.split("[\\s,.!?;:]+");
                 for (int i = lexemes.length-1; i>=0; i--) {
                     System.out.print(lexemes[i] + " ");
                 }
-                System.out.println();
+               System.out.println();
             }
             reader.close();
         } catch (IOException e) {
