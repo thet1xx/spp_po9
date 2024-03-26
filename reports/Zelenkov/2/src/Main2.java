@@ -7,8 +7,6 @@ public class Main2 {
     private static final String OPTION_NUMERIC_SUFFIXES = "-d";
 
     public static void main(String[] args) {
-        System.out.println(args.length);
-        System.out.println(args[0]);
         if (args.length <= 2 || args.length > 6 || !args[0] .equals("split")) {
             System.out.println("Usage: java SplitUtility split [-b num | -l num] [-d] [input_file] [output_prefix]");
             System.exit(1);
