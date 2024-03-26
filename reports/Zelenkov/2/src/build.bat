@@ -1,0 +1,1 @@
+java -cp C:\Users\kosty\IdeaProjects\Lab2\out\artifacts\Lab2_jar\Lab2.jar Main2 split -l 8 - input.txt output
