@@ -16,12 +16,21 @@ public class Task2 {
         for (int i = 1; i < args.length; i++) {
             switch (args[i]) {
                 case "-c":
+                    if(count || duplicates || unique){
+                        System.exit(1);
+                    }
                     count = true;
                     break;
                 case "-d":
+                    if(count || duplicates || unique){
+                        System.exit(1);
+                    }
                     duplicates = true;
                     break;
                 case "-u":
+                    if(count || duplicates || unique){
+                        System.exit(1);
+                    }
                     unique = true;
                     break;
                 case "-i":
