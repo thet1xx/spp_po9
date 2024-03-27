@@ -5,12 +5,15 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         example_1();
         System.out.println("\n\n\n\n");
-        example_2();
-
-
+        try {
+            example_2();
+        } catch (FileNotFoundException e) {
+            System.out.println("Файла нетутутутутуту");
+            return;
+        }
 
     }
     public static void example_1(){
