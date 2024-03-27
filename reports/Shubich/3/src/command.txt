@@ -1,0 +1,18 @@
+PUSH 5
+PUSH 3
++
+PRINT
+CLEAR
+#
+PUSH 3
+SQRT
+PRINT
+CLEAR
+#
+НЕПРАВИЛЬНАЯ
+#
+PUSH 49
+PUSH 7
+/
+PRINT
+CLEAR
