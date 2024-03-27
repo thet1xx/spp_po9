@@ -38,8 +38,8 @@ public class Triangle {
         return this.catet_b*this.catet_a/2;
     }
     public void output(){
-        System.out.println(this.perimeter());
-        System.out.println(this.square());
+        System.out.println("PERIMETER " + this.perimeter());
+        System.out.println("S "+this.square());
     }
     public boolean equals(Triangle a){
         if(this.catet_a==a.catet_a && this.catet_b==a.catet_b)

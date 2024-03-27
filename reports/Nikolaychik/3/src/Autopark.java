@@ -2,18 +2,9 @@ import java.util.*;
 
 public class Autopark {
     ArrayList<Bus> busList;
-    static HashSet<Integer> nums =null;
 
     public Autopark(){
         this.busList = new ArrayList<Bus>();
-
-        this.busList.add(new Bus(1,1,"Puki",2000,1000));
-        busList.get(0).setIn_Park();
-        this.busList.add(new Bus(2,1,"Puki",2000,10000000));
-        busList.get(1).setIn_Park();
-        this.busList.add(new Bus(3,1,"Mercedes",2020,1000));
-        this.busList.add(new Bus(4,2,"Mercedes",2020,1000));
-        this.busList.add(new Bus(5,2,"Mercedes",2020,10000000));
     }
 
     public ArrayList<Bus> allBus(){
