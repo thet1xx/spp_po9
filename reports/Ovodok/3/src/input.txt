@@ -1,0 +1,9 @@
+ADD_DIRECTORY subdir root
+ADD_DIRECTORY subsubdir subdir
+ADD_FILE document txt 200 root
+ADD_FILE info jpg 100 root
+ADD_FILE data csv 300 root/subdir/subsubdir
+ADD_FILE code java 400 root/subdir
+ADD_FILE image bmp 500 root
+REMOVE_FILE document root
+REMOVE_DIRECTORY subdir root
