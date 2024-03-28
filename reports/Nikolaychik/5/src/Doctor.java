@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
-public class Doctor extends Mensch{
+public class Doctor extends Mensch {
     Hospital hospital;
     int id;
-    Doctor(String name, Hospital hospital){
-        super(name,50);
+    Doctor(String name, Hospital hospital,int age){
+        super(name,age);
         this.name=name;
         this.hospital=hospital;
         this.id=0;

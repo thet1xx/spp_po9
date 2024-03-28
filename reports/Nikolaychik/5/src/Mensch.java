@@ -1,4 +1,4 @@
-public class Mensch {
+abstract public class Mensch {
     protected String name;
     protected int age;
     Mensch(String name,int age){

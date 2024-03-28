@@ -7,8 +7,8 @@ public class Patient extends Mensch{
     int type;
     public Doctor doctor;
     String note=null;
-    Patient(String name, Hospital hospital, Doctor doctor){
-        super(name,50);
+    Patient(String name, Hospital hospital, Doctor doctor,int age){
+        super(name,age);
         this.name=name;
         this.hospital=hospital;
         this.doctor=doctor;

@@ -1,4 +1,4 @@
-public class Instrument {
+abstract public class Instrument {
     protected int cost;
     protected int year;
     protected String brand;

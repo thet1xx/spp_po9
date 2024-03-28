@@ -1,5 +1,5 @@
 public class Ex_2 {
-    Ex_2() throws Exception {
+    Ex_2(){
         Instrument[] Orchestra = new Instrument[4];
         try {
             Percussion_Instrument per = new Percussion_Instrument(200,2000,"Boomba");
@@ -17,7 +17,7 @@ public class Ex_2 {
             Orchestra[2] =wer;
             Orchestra[2].out();
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            System.out.println("Музыка не играет. Она сломалась");;
         }
     }
 }
