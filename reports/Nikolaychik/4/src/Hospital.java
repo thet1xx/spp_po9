@@ -4,18 +4,9 @@ public class Hospital {
     public ArrayList<Doctor> stored_doctors = null;
     public ArrayList<Patient> stored_patients = null;
     Hospital(){
-        this.stored_doctors.add(new Doctor("Koba",this));
-        this.stored_doctors.add(new Doctor("Zloba",this));
-        this.stored_doctors.add(new Doctor("Moba",this));
-        this.stored_doctors.add(new Doctor("Zaznoba",this));
-        this.stored_patients.add(new Patient("Pufik",this,
-                stored_doctors.get(0)));
-        this.stored_patients.add(new Patient("Aufik",this,
-                stored_doctors.get(1)));
-        this.stored_patients.add(new Patient("Gulfik",this,
-                stored_doctors.get(2)));
-        this.stored_patients.add(new Patient("Rufik",this,
-                stored_doctors.get(3)));
+        stored_doctors=new ArrayList<Doctor>();
+        stored_patients = new ArrayList<Patient>();
+
     }
     public void out_doc(){
         for (int i = 0; i < this.stored_doctors.size(); i++) {
