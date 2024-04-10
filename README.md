@@ -33,16 +33,16 @@
 |12|Марзан Андрей | [Nenroin](https://github.com/Nenroin) | [210661](./reports/Marzan/)|✅|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
 |13|Матюшик Екатерина |[Katriiiiiiinaaaa](https://github.com/Katriiiiiiinaaaa)|[210662](./reports/)|✅|:x:|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
 |14|Мельничук Владислав | [nikalow1](https://github.com/nikalow1) | [210663](./reports/) |✅|✅|✅|:x:|:x:|:x:|:x:|:x:|
-|15|Мисиюк Алексей | [11ALX11](https://github.com/11ALX11) | [210664](./reports/Misijuk/) |✅|✅|✅|✅|:x:|:x:|:x:|:x:|
-|16|Николайчик Николай | [ProstoMyk](https://github.com/ProstoMyk) | [210665](./reports/Nikolaychik/) |✅|✅|:x:|:x:|:x:|:x:|:x:|:x:|
-|17|Ничингер Кирилл |[HeyJIOBUM](https://github.com/HeyJIOBUM)|[210666](./reports/Nichinger/)|✅|✅|✅|:x:|:x:|:x:|:x:|:x:|
-|18|Оводок Вадим | [Vodemus](https://github.com/Vodemus) | [210667](./reports/Ovodok/)|✅|✅|✅|:x:|:x:|:x:|:x:|:x:|
-|19|Солышко Дмитрий |[dimasolyshko](https://github.com/dimasolyshko)|[210668](./reports/Solyshko/)|✅|✅|✅|:x:|:x:|:x:|:x:|:x:|
-|20|Ступак Дмитрий |[Papirosa225](https://github.com/Papirosa225) | [210669](./reports/)|✅|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
+|15|Мисиюк Алексей | [11ALX11](https://github.com/11ALX11) | [210664](./reports/Misijuk/) |✅|✅|✅|✅|✅|:x:|:x:|:x:|
+|16|Николайчик Николай | [ProstoMyk](https://github.com/ProstoMyk) | [210665](./reports/Nikolaychik/) |✅|✅|✅|:x:|:x:|:x:|:x:|:x:|
+|17|Ничингер Кирилл |[HeyJIOBUM](https://github.com/HeyJIOBUM)|[210666](./reports/Nichinger/)|✅|✅|✅|✅|:x:|:x:|:x:|:x:|
+|18|Оводок Вадим | [Vodemus](https://github.com/Vodemus) | [210667](./reports/Ovodok/)|✅|✅|✅|✅|:x:|:x:|:x:|:x:|
+|19|Солышко Дмитрий |[dimasolyshko](https://github.com/dimasolyshko)|[210668](./reports/Solyshko/)|✅|✅|✅|✅|:x:|:x:|:x:|:x:|
+|20|Ступак Дмитрий |[Papirosa225](https://github.com/Papirosa225) | [210669](./reports/)|✅|✅|:x:|:x:|:x:|:x:|:x:|:x:|
 |21|Тупик Юлия |[dljulia](https://github.com/dljulia)|[210670](./reports/Tupik/)|✅|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
 |22|Тусюк Тимофей |[HuKtoHe3HaeT](https://github.com/HuKtoHe3HaeT)|[210671](./reports/)|:x:|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
 |23|Харитонович Захар |[ZakharTS](https://github.com/ZakharTS)|[210672](./reports/Kharytanovich/)|✅|✅|✅|:x:|:x:|:x:|:x:|:x:|
-|24|Шубич Дарья|[Dashubaa](https://github.com/Dashubaa)|[210674](./reports/Shubich)|✅|✅|✅|:x:|:x:|:x:|:x:|:x:|
+|24|Шубич Дарья|[Dashubaa](https://github.com/Dashubaa)|[210674](./reports/Shubich)|✅|✅|✅|✅|:x:|:x:|:x:|:x:|
 |25|Зайд Халдун А. Алькатури| | |:x:|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
 
 
