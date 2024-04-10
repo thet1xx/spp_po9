@@ -29,12 +29,14 @@ public class CharacterSet {
         }
         return false;
     }
-    public void union(CharacterSet otherSet) {
-        for (int i = 0; i < otherSet.size; i++) {
-            if (!contains(otherSet.set[i])) {
-                add(otherSet.set[i]);
+    public CharacterSet union(CharacterSet otherSet) {
+        CharacterSet temp = otherSet;
+        for (int i = 0; i < temp.size; i++) {
+            if (!contains(temp.set[i])) {
+                add(temp.set[i]);
             }
         }
+        return temp;
     }
     public void print() {
         for (int i = 0; i < size; i++) {
@@ -47,7 +49,14 @@ public class CharacterSet {
             return false;
         }
         for (int i = 0; i < size; i++) {
-            if (this.set[i] != otherSet.set[i]) {
+            boolean isFind=false;
+            for (int j = 0; j < size; j++) {
+                if (this.set[i] == otherSet.set[j]) {
+                    isFind=true;
+                    break;
+                }
+            }
+            if(!isFind) {
                 return false;
             }
         }
