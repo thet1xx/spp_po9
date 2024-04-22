@@ -26,7 +26,7 @@
 |5|Зейденс Никита |[NiKiTjAOFF](https://github.com/NIKITJAOFF)|[210654](./reports/)|✅|✅|:x:|:x:|:x:|:x:|:x:|:x:|
 |6|Зеленков Константин |[Pandus](https://github.com/Pandusss)|[210655](./reports/)|✅|✅|:x:|✅|:x:|:x:|:x:|:x:|
 |7|Качаловский Данил |[dkachalovskiy](https://github.com/dkachalovskiy)|[210656](./reports/Kachalovskiy/)|✅|✅|✅|✅|:x:|:x:|:x:|:x:|
-|8|Кот Анастасия |[peppemintu](https://github.com/peppemintu)|[210657](./reports/Kot/)|✅|✅|:x:|:x:|✅|:x:|:x:|:x:|
+|8|Кот Анастасия |[peppemintu](https://github.com/peppemintu)|[210657](./reports/Kot/)|✅|✅|✅|:x:|✅|:x:|:x:|:x:|
 |9|Кухарев Дмитрий |[Ian3707](https://github.com/Ian3707)|[210658](./reports/)|✅|✅|✅|:x:|:x:|:x:|✅|:x:|
 |10|Кучко Ярослав |[YaroslavKuchko26](https://github.com/YaroslavKuchko26)|[210659](./reports/)|:x:|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
 |11|Лебедович Вадим|[thet1xx](https://github.com/thet1xx)|[210660](./reports/)|:x:|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
