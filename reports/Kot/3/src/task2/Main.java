@@ -40,15 +40,18 @@ public class Main {
             System.out.println("\nGrouped flights by passenger capacity:");
             System.out.println("Small capacity flights:");
             for (Flight flight : groupedFlights.get(0)) {
-                System.out.println(flight.getFlightNumber() + " - " + flight.getDepartureTime());
+                System.out.print(flight.getFlightNumber() + " - " + flight.getDepartureTime() + " - ");
+                System.out.println("Passenger capacity = " + flight.calculatePassengerCapacity(flight.getAircraftType()));
             }
             System.out.println("\nMedium capacity flights:");
             for (Flight flight : groupedFlights.get(1)) {
-                System.out.println(flight.getFlightNumber() + " - " + flight.getDepartureTime());
+                System.out.print(flight.getFlightNumber() + " - " + flight.getDepartureTime() + " - ");
+                System.out.println("Passenger capacity = " + flight.calculatePassengerCapacity(flight.getAircraftType()));
             }
             System.out.println("\nLarge capacity flights:");
             for (Flight flight : groupedFlights.get(2)) {
-                System.out.println(flight.getFlightNumber() + " - " + flight.getDepartureTime());
+                System.out.print(flight.getFlightNumber() + " - " + flight.getDepartureTime() + " - ");
+                System.out.println("Passenger capacity = " + flight.calculatePassengerCapacity(flight.getAircraftType()));
             }
 
             List<Flight> roundTripFlights = flightManager.getRoundTripFlights();

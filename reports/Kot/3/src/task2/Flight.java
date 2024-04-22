@@ -18,6 +18,18 @@ public class Flight {
         this.operatingDays = operatingDays;
     }
 
+    public int calculatePassengerCapacity(String aircraftType) {
+        if (aircraftType.equalsIgnoreCase("Boeing 737")) {
+            return 180;
+        } else if (aircraftType.equalsIgnoreCase("Airbus A320")) {
+            return 100;
+        } else if (aircraftType.equalsIgnoreCase("Boeing 777")) {
+            return 300;
+        } else {
+            return 0;
+        }
+    }
+
     public String getDestination() {
         return destination;
     }
