@@ -1,5 +1,3 @@
-package Lab4_3;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,21 +21,18 @@ public class Dispatcher {
         drivers.add(driver);
     }
 
-    public void addTrip(Trip trip) {
-        trips.add(trip);
-    }
-
-    public void assignTrip(Trip trip) {
-        if (!(trip.getStatus())) {
+    public Trip assignTrip(String destination) {
             Car car = findAvailableCar();
             Driver driver = findAvailableDriver();
+            Trip trip= new Trip(destination, car, driver);
             driver.setTrip(trip);
             trip.setCar(car);
             trip.setDriver(driver);
             car.setAvailable(false);
             driver.setAvailable(false);
+            trips.add(trip);
             System.out.println("На рейс назначен: " + driver.toString() + " " + car.toString());
-        }
+            return trip;
     }
 
     private Car findAvailableCar() {

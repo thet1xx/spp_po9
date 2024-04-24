@@ -1,4 +1,3 @@
-package Lab4_3;
 public class Lab4_3 {
 
     public static void main(String[] args) {
@@ -13,10 +12,7 @@ public class Lab4_3 {
         dispatcher.addDriver(driver1);
         dispatcher.addDriver(driver2);
 
-        Trip trip = new Trip("Москва", null, null);
-
-        dispatcher.addTrip(trip);
-        dispatcher.assignTrip(trip);
+        Trip trip= dispatcher.assignTrip("Владивосток");
         System.out.println(trip);
         dispatcher.removeDriver(driver2);
         driver1.markTripCompleted();

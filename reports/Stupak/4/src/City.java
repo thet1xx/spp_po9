@@ -1,12 +1,17 @@
-package Lab4_1;
-
 import java.util.ArrayList;
 import java.util.List;
 
+ enum Type  {
+    square,
+    street,
+    boulevard,
+    avenue,
+}
 public class City {
 
     private String name;
     private List<Address> addresses;
+
 
     public City(String name) {
         this.name = name;
@@ -30,10 +35,10 @@ public class City {
 
     public static class Address {
 
-        private String type;
+        Type type;
         private String name;
 
-        public Address(String type, String name) {
+        public Address(Type type, String name) {
             this.type = type;
             this.name = name;
         }

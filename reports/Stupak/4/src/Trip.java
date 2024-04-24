@@ -1,5 +1,3 @@
-package Lab4_3;
-
 public class Trip {
 
     private String destination;

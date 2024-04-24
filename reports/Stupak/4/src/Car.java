@@ -1,5 +1,3 @@
-package Lab4_3;
-
 public class Car {
 
     private String model;
@@ -33,4 +31,3 @@ public class Car {
         return "Автомобиль: " + model + " (" + licensePlate + ")";
     }
 }
-

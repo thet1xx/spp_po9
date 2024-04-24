@@ -1,5 +1,3 @@
-package Lab4_3;
-
 public class Driver {
 
     private String name;
@@ -26,7 +24,7 @@ public class Driver {
             trip.getCar().setAvailable(true);
             return;
         }
-       System.out.println("У водителя нет рейса");
+        System.out.println("У водителя нет рейса");
     }
     public String getName() {
         return name;
