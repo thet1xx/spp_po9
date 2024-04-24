@@ -51,14 +51,19 @@ class Guide extends Book{
 
 class Encyclopedia extends Book{
     private String series;
+    private int toms;
+
+    private String specification;
     private int pages;
-    public Encyclopedia(int code, String author, String title, int year, String publisher, String series, int pages){
+    public Encyclopedia(int code, String author, String title, int year, String publisher, String series, int pages, int toms, String specification){
         super(code, author, title, year, publisher);
         this.series = series;
         this.pages = pages;
+        this.toms = toms;
+        this.specification = specification;
     }
     public void display(){
-        System.out.println("Энциклопедия\nКод: " + getCode() + "\nАвтор: " + getAuthor() + "\nНазвание: " + getTitle() + "\nГод: " + getYear() + "\nИздатель: " + getPublisher() + "\nСерия: " + series + "\nСтраницы: " + pages);
+        System.out.println("Энциклопедия\nКод: " + getCode() + "\nАвтор: " + getAuthor() + "\nНазвание: " + getTitle() + "\nГод: " + getYear() + "\nИздатель: " + getPublisher() + "\nСерия: " + series + "\nСтраницы: " + pages + "\nТом: " + toms + "\nСпецификация: " + specification);
     }
 }
 
@@ -66,7 +71,7 @@ public class task1 {
     public static void main(String[] args) {
         Guide book1 = new Guide(22110, "Б.А.Балтухин", "Биология в таблицах", 2017, "Айрис-пресс", "Школьная программа", 113);
         book1.display();
-        Encyclopedia book2 = new Encyclopedia(33210, "В.А.Кудрянова", "Все о динозаврах", 2010, "Рамазан", "Экнциклопедия для детского сада", 32);
+        Encyclopedia book2 = new Encyclopedia(33210, "В.А.Кудрянова", "Все о динозаврах", 2010, "Рамазан", "Экнциклопедия для детского сада", 32, 3, "О животных");
         book2.display();
     }
 }
