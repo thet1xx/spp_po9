@@ -1,40 +1,27 @@
-package Task2;
+package Task2_1;
 
-import Task2.Audi.AudiFactory;
-import Task2.Interfaces.Car;
-import Task2.Interfaces.CarAndRemoteControlFactory;
-import Task2.Interfaces.RemoteControl;
-import Task2.Mersedes.MersedesFactory;
+import Task2_1.Car.AudiCar;
+import Task2_1.Car.Car;
+import Task2_1.Car.MersedesCar;
+import Task2_1.RemoteControl.RemoteControl;
+import Task2_1.RemoteControl.RemoteControlProMax;
 
 public class Main {
+
     public static void main(String[] args) {
-        CarAndRemoteControlFactory carAndRemoteControl = new MersedesFactory();
+        Car audiCar = new AudiCar(new RemoteControl());
+        Car mersedesCar = new MersedesCar(new RemoteControlProMax());
 
-        Car car =  carAndRemoteControl.getCar();
-        RemoteControl remoteControl = carAndRemoteControl.getController();
+        audiCar.start();
+        audiCar.stop();
 
-        car.startEngine();
-        car.drive();
-        car.stopEngine();
+        System.out.println("-------------------------------------");
 
-        remoteControl.unlockDoors();
-        remoteControl.startEngine();
-        remoteControl.activateAlarm();
-        remoteControl.lockDoors();
-        System.out.println("----------------------------------------------");
-
-        carAndRemoteControl = new AudiFactory();
-        car =  carAndRemoteControl.getCar();
-        remoteControl = carAndRemoteControl.getController();
-
-        car.startEngine();
-        car.drive();
-        car.stopEngine();
-
-        remoteControl.unlockDoors();
-        remoteControl.startEngine();
-        remoteControl.activateAlarm();
-        remoteControl.lockDoors();
+        mersedesCar.start();
+        mersedesCar.stop();
 
     }
+
+
+
 }

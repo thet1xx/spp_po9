@@ -1,6 +1,6 @@
-package Task2.Interfaces;
+package Task2_1.RemoteControl;
 
-public interface RemoteControl {
+public interface RemoteControlInterface {
     void activateAlarm();
     void lockDoors();
     void unlockDoors();
