@@ -1,14 +1,19 @@
-class Transport{
+abstract class Transport{
     private String name;
+    private String type;
     private double speed;
     private double costPerHour;
 
-    public Transport(String name, double speed, double costPerHour){
+    public Transport(String name, String type, double speed, double costPerHour){
         this.name = name;
+        this.type = type;
         this.speed = speed;
         this.costPerHour = costPerHour;
     }
 
+    public String getType(){
+        return type;
+    }
     public double calculatePassengerTime(double distance){
         return distance / speed;
     }
@@ -27,44 +32,64 @@ class Transport{
         return time * costPerHour;
     }
 
-    public void information(String type, double time, double cost){
-        System.out.println("Вид транспорта: " + name + "\nВид перевозки:" + type + "\nВремя перевозки: " + time + "\nСтоимость: " + cost + "\n");
+    public void information(){
+        System.out.println("Вид транспорта: " + name + "\nВид перевозки: " + type);
     }
 }
 
 class Car extends Transport{
-    public Car(){
-        super("Автомобиль", 60, 10);
+    private int passengerCapacity;
+    public Car(String name, String type, int speed, int costPerHour, int passengerCapacity){
+        super(name, type,speed, costPerHour);
+        this.passengerCapacity = passengerCapacity;
+    }
+    @Override
+    public void information(){
+        super.information();
+        System.out.println("Кол-во пассажиров: " + passengerCapacity);
     }
 }
 
 class Bicycle extends Transport{
-    public Bicycle(){
-        super("Велосипед", 20, 0);
+    public Bicycle(String name, String type, int speed, int costPerHour){
+        super(name, type, speed, costPerHour);
     }
 }
 
 class Cart extends Transport{
-    public Cart(){
-        super("Повозка", 10, 5);
+    private int horsePower;
+    public Cart(String name, String type, int speed, int costPerHour, int horsePower){
+        super(name, type,speed, costPerHour);
+        this.horsePower = horsePower;
     }
+
+    @Override
+    public void information(){
+        super.information();
+        System.out.println("Лошадей: " + horsePower);
+    }
+
 }
 
 public class task2 {
     public static void main(String[] args){
-        Car car = new Car();
-        double carPassengerTime = car.calculatePassengerTime(100);
-        double carPassengerCost = car.calculatePassengerCost(100);
-        car.information("Пассажирский",carPassengerTime, carPassengerCost);
+        Transport[] transports = new Transport[3];
 
-        Bicycle bicycle = new Bicycle();
-        double bicycleCargoTime = bicycle.calculateCargoTime(50);
-        double bicycleCargoCost = bicycle.calculateCargoCost(50);
-        bicycle.information("Грузовой", bicycleCargoTime, bicycleCargoCost);
+        transports[0] = new Car("Автомобиль", "Грузовой", 120, 30, 4);
+        transports[1] = new Bicycle("Велосипед", "Пассажирский", 25, 5);
+        transports[2] = new Cart("Повозка", "Грузовой", 50, 10, 2);
 
-        Cart cart = new Cart();
-        double cartPassengerTime = cart.calculatePassengerTime(80);
-        double cartPassengerCost = cart.calculatePassengerCost(80);
-        cart.information("Пассажирский", cartPassengerTime, cartPassengerCost);
-    }
+        for(Transport transport : transports){
+            transport.information();
+            if(transport.getType().equals("Пассажирский")){
+                double passengerTime = transport.calculatePassengerTime(100);
+                double passengerCost = transport.calculatePassengerCost(100);
+                System.out.println("Время перевозки груза: " + passengerTime + "\nСтоимость: " + passengerCost + "\n");
+            }else {
+                double cargoTime = transport.calculateCargoTime(50);
+                double cargoCost = transport.calculateCargoCost(50);
+                System.out.println("Время перевозки груза: " + cargoTime + "\nСтоимость: " + cargoCost + "\n");
+            }
+
+        }
 }

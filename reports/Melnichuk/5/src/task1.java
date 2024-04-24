@@ -64,9 +64,9 @@ class Encyclopedia extends Book{
 
 public class task1 {
     public static void main(String[] args) {
-        Book book1 = new Guide(22110, "Б.А.Балтухин", "Биология в таблицах", 2017, "Айрис-пресс", "Школьная программа", 113);
+        Guide book1 = new Guide(22110, "Б.А.Балтухин", "Биология в таблицах", 2017, "Айрис-пресс", "Школьная программа", 113);
         book1.display();
-        Book book2 = new Encyclopedia(33210, "В.А.Кудрянова", "Все о динозаврах", 2010, "Рамазан", "Экнциклопедия для детского сада", 32);
+        Encyclopedia book2 = new Encyclopedia(33210, "В.А.Кудрянова", "Все о динозаврах", 2010, "Рамазан", "Экнциклопедия для детского сада", 32);
         book2.display();
     }
 }
