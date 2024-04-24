@@ -1,7 +1,7 @@
 package org.example;
 
 // конкретная стратегия для проезда
-public class TransportationStrategy implements TourPackageStrategy{
+public class TransportationStrategy implements TourPackageBuilder{
 
     @Override
     public int calculateCost() {
