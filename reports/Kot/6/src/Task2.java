@@ -1,133 +1,82 @@
-abstract class Car {
-    String brand;
-    abstract void honk();
+interface Car {
+    void honk();
+    void doors();
+    void start();
 }
 
-class Ford extends Car {
-    Ford() {
-        this.brand = "Ford";
-    }
-
+class Ford implements Car {
     @Override
     public void honk() {
-        System.out.println(this.brand + " is honking at ya!");
-    }
-}
-
-class Toyota extends Car {
-    Toyota() {
-        this.brand = "Toyota";
-    }
-    @Override
-    public void honk() {
-        System.out.println(brand + " ain't honking at you. Only staring.");
-    }
-}
-
-interface RemoteControl {
-    void activateSignaling();
-    void manipulateDoors();
-    void startEngine();
-}
-
-class FordRemote implements RemoteControl {
-    @Override
-    public void activateSignaling() {
-        System.out.println("Ford-Ford signal activated!");
+        System.out.println("Ford is honking at ya!");
     }
 
     @Override
-    public void manipulateDoors() {
+    public void doors() {
         System.out.println("Your Ford door's configuration has been changed!");
     }
 
     @Override
-    public void startEngine() {
-        System.out.println("Ford says: vroom-vroom");
+    public void start() {
+        System.out.println("Ford has started: vroom-vroom");
     }
 }
 
-class ToyotaRemote implements RemoteControl {
+class Toyota implements Car {
     @Override
-    public void activateSignaling() {
-        System.out.println("Toyota has activated signaling for you");
+    public void honk() {
+        System.out.println("Toyota ain't honking at you. Only staring.");
     }
 
     @Override
-    public void manipulateDoors() {
+    public void doors() {
         System.out.println("Toyota has changed door status.");
     }
 
     @Override
-    public void startEngine() {
+    public void start() {
         System.out.println("Toyota is ready to roll.");
     }
 }
 
-interface CarFactory {
-    Car createCar();
-    RemoteControl createRemoteControl();
-}
-
-class FordFactory implements CarFactory {
-    @Override
-    public Car createCar() {
-        return new Ford();
-    }
-
-    @Override
-    public RemoteControl createRemoteControl() {
-        return new FordRemote();
-    }
-}
-
-class ToyotaFactory implements CarFactory {
-    @Override
-    public Car createCar() {
-        return new Toyota();
-    }
-
-    @Override
-    public RemoteControl createRemoteControl() {
-        return new ToyotaRemote();
-    }
-}
-
-class Client {
+class CarRemote {
     private final Car car;
-    private final RemoteControl remote;
 
-    public Client(CarFactory carFactory) {
-        car = carFactory.createCar();
-        remote = carFactory.createRemoteControl();
+    CarRemote(Car car) {
+        this.car = car;
     }
 
-    public void showOff() {
+    public void activateSignaling() {
         car.honk();
-        remote.activateSignaling();
-        remote.manipulateDoors();
-        remote.startEngine();
+    }
+
+    public void manipulateDoors() {
+        car.doors();
+    }
+
+    public void startEngine() {
+        car.start();
     }
 }
+
 
 public class Task2 {
     public static void main(String[] args) {
-        Client fordClient;
-        CarFactory fordFactory;
+        Car ford = new Ford();
+        CarRemote fordRemote = new CarRemote(ford);
 
-        fordFactory = new FordFactory();
-        fordClient = new Client(fordFactory);
-
-        fordClient.showOff();
+        System.out.println("Ford Client:");
+        fordRemote.activateSignaling();
+        fordRemote.manipulateDoors();
+        fordRemote.startEngine();
 
         System.out.println("-----------------------------");
 
-        Client toyotaClient;
-        CarFactory toyotaFactory;
+        Car toyota = new Toyota();
+        CarRemote toyotaRemote = new CarRemote(toyota);
 
-        toyotaFactory = new ToyotaFactory();
-        toyotaClient = new Client(toyotaFactory);
-
-        toyotaClient.showOff();
+        System.out.println("Toyota Client:");
+        toyotaRemote.activateSignaling();
+        toyotaRemote.manipulateDoors();
+        toyotaRemote.startEngine();
     }
 }
