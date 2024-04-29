@@ -33,12 +33,9 @@ public class Patient extends Mensch{
         this.type=in_type;
 
     }
-    void out(){
-        System.out.println("PATIENT");
-        System.out.println("id: "+this.id);
-        System.out.println("name: "+this.name);
-        System.out.println();
-        System.out.println("AND HIS DOCTOR");
-        this.doctor.out();
+    public String toString(){
+        return "PATIENT\n" +
+                "id: "+this.id + '\n' +
+                "name: "+this.name + "\n\n";
     }
 }

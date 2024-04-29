@@ -1,22 +1,22 @@
 import java.util.ArrayList;
 
-public class Doctor extends Mensch {
+public class Nurse extends Mensch {
     Hospital hospital;
     int id;
-    Doctor(String name, Hospital hospital,int age){
+    Nurse(String name, Hospital hospital,int age){
         super(name,age);
         this.name=name;
         this.hospital=hospital;
         this.id=0;
-        hospital.stored_doctors.add(this);
-        if(hospital.stored_doctors==null){
-            hospital.stored_doctors= new ArrayList<Doctor>();
+        hospital.stored_nurse.add(this);
+        if(hospital.stored_nurse==null){
+            hospital.stored_nurse= new ArrayList<Nurse>();
         }
         boolean flag=true;
         for (int i=1;this.id==0;i++){
             flag=true;
-            for(int j=0;j<hospital.stored_doctors.size();j++){
-                if(hospital.stored_doctors.get(j).id == i)
+            for(int j=0;j<hospital.stored_nurse.size();j++){
+                if(hospital.stored_nurse.get(j).id == i)
                 {
                     flag=false;
                 }
@@ -27,13 +27,9 @@ public class Doctor extends Mensch {
         }
     }
 
-    void Set_note(String note, Patient patient){
-        if(this.id== patient.doctor.id) {
-            patient.note = note;
-            patient.type = patient.wait_type;
-            System.out.println("Назначено");
-        }
-        else System.out.println("Невозможно назначить");
+    void Set_ukol(Patient patient){
+        System.out.println(patient.toString());
+        System.out.println("УКОЛОТ");
     }
     void Cure(Patient patient){
         for(int j=0;j<patient.hospital.stored_patients.size();j++){
@@ -45,7 +41,7 @@ public class Doctor extends Mensch {
 
     }
     public String toString(){
-        return "DOCTOR\n" +
+        return "NURSE\n" +
                 "id: "+this.id + '\n' +
                 "name: "+this.name + "\n\n";
     }

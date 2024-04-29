@@ -1,5 +1,5 @@
 public interface Employee {
-    void interacted(String type, int cost);
-    void Interaction(Employee employee, int cost);
+    void interacted(String type, float cost);
+    void Interaction(Employee employee, float cost);
     void out();
 }

@@ -2,9 +2,9 @@ import java.util.concurrent.TimeUnit;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        new Ex_1();
+        //new Ex_1();
         new Ex_2();
-        example_3();
+        //example_3();
 
     }
     public static void example_3(){
@@ -21,6 +21,11 @@ public class Main {
                 hospital.stored_doctors.get(2),12));
         hospital.stored_patients.add(new Patient("Rufik",hospital,
                 hospital.stored_doctors.get(3),89));
+
+        hospital.stored_nurse.add(new Nurse("Rufik",hospital, 56));
+
+        hospital.stored_nurse.get(0).Set_ukol(hospital.stored_patients.get(2));
+
         hospital.out_doc();
         hospital.out_pat();
     }

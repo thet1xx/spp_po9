@@ -1,17 +1,17 @@
 public class Director implements Employee{
     int age = 0;
     String name = null;
-    int money = 0;
-    int mood = 0;
+    float money = 0;
+    float mood = 0;
     String type="director";
-    Director(int age,String name,int money,int mood){
+    Director(int age,String name,float money,float mood){
         this.mood=mood;
         this.age=age;
         this.money=money;
         this.name=name;
     }
     @Override
-    public void interacted(String type, int cost){
+    public void interacted(String type, float cost){
         if(type.equals("director")){
             this.money+=cost/4;
             this.mood-=cost/4;
@@ -22,7 +22,7 @@ public class Director implements Employee{
         }
     }
     @Override
-    public void Interaction(Employee employee, int cost){
+    public void Interaction(Employee employee, float cost){
         employee.interacted(type,cost);
         this.money+=cost*3/4;
         this.mood+=cost/2;
