@@ -2,12 +2,14 @@ package Task_02;
 
 import java.util.Random;
 
-public class PremiumLevel implements ActivityLevel {
+public class EliteLevelDecorator extends PremiumLevelDecorator {
     @Override
     public void purchaseBook(Book book, CustomerAccount customer) {
         System.out.println("Purchasing book: " + book.getTitle());
         customer.incrementPoints(book.getPoints());
-        checkUpgrade(customer);
+        double discount = book.getPrice() * 0.1; // 10% скидка для элиты
+        customer.addBalance(discount);
+        System.out.println("You received a cashback of $" + discount + " for your elite level.");
     }
 
     @Override
@@ -16,16 +18,9 @@ public class PremiumLevel implements ActivityLevel {
         int result = random.nextInt(100);
         if (result < 30) {
             System.out.println("You won the contest");
-            customer.addBalance(20);
+            customer.addBalance(10);
         } else {
             System.out.println("Better luck next time! No prize this time.");
-        }
-    }
-
-    private void checkUpgrade(CustomerAccount customer) {
-        if (customer.getPoints() >= 10) {
-            customer.setActivityLevel(new EliteLevel());
-            System.out.println("Congratulations! You have been upgraded to Elite Level.");
         }
     }
 }

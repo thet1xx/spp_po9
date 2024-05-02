@@ -1,11 +1,12 @@
 package Task_02;
+
 public class CustomerAccount {
     private ActivityLevel activityLevel;
     private int points;
     private double balance;
 
     public CustomerAccount() {
-        this.activityLevel = new BasicLevel();
+        this.activityLevel = new BasicLevelDecorator();
         this.points = 0;
         this.balance = 0;
     }
@@ -28,13 +29,14 @@ public class CustomerAccount {
 
     public void purchaseBook(Book book) {
         if (book.getPrice() <= balance) {
-            System.out.println("Purchasing book: " + book.getTitle() + " for $" + book.getPrice());
+            System.out.println("Purchasing book: " + book.getTitle() + " for $" +
+                    book.getPrice());
             balance -= book.getPrice();
             System.out.println("Remaining balance: $" + balance);
+            activityLevel.purchaseBook(book, this);
         } else {
             System.out.println("Not enough balance to purchase " + book.getTitle());
         }
-        activityLevel.purchaseBook(book, this);
     }
 
     public void participateInContest() {
