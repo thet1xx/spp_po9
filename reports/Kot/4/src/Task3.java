@@ -1,45 +1,37 @@
 import java.util.ArrayList;
 import java.util.List;
 
-// Интерфейс для обработки оплаты заказа
-interface PaymentProcess {
-    void pay();
-}
-
-// Абстрактный класс, представляющий товар
-abstract class Product {
-    protected String name;
-    protected double price;
+class Product {
+    private String name;
+    private double price;
+    private String description;
 
     public Product(String name, double price) {
         this.name = name;
         this.price = price;
     }
 
-    public abstract String getDescription();
-}
-
-// Класс, представляющий товар
-class Item extends Product {
-    private String description;
-
-    public Item(String name, double price, String description) {
-        super(name, price);
-        this.description = description;
+    public String getName() {
+        return name;
     }
 
-    @Override
+    public double getPrice() {
+        return price;
+    }
+
     public String getDescription() {
         return description;
     }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }
 
-// Класс, представляющий заказ на товары
-class Order implements PaymentProcess {
+class Cart {
     private List<Product> products;
-    private boolean paid = false;
 
-    public Order() {
+    public Cart() {
         products = new ArrayList<>();
     }
 
@@ -47,153 +39,93 @@ class Order implements PaymentProcess {
         products.add(product);
     }
 
-    public void removeProduct(Product product) {
-        products.remove(product);
-    }
-
     public double calculateTotalPrice() {
         double total = 0;
         for (Product product : products) {
-            total += product.price;
+            total += product.getPrice();
         }
         return total;
     }
-
-    @Override
-    public void pay() {
-        paid = true;
-    }
-
-    public boolean isPaid() {
-        return paid;
-    }
 }
 
-// Класс, представляющий продажу товаров
-class Sale {
-    private Order order;
-    private boolean registered;
-
-    public Sale(Order order) {
-        this.order = order;
-    }
-
-    public void registerSale() {
-        registered = true;
-    }
-
-    public boolean isRegistered() {
-        return registered;
-    }
-}
-
-// Класс, представляющий администратора магазина
 class Administrator {
-    private List<String> blackList;
-    private List<Product> products;
+    static private List<String> paymentRegistry = new ArrayList<>();
+    static private List<String> blacklist = new ArrayList<>();
 
-    public void addProductInfo(Product product) {
-        products.add(product);
+    public static void registerPayment(String clientName, double amount) {
+        paymentRegistry.add("Client: " + clientName + ", Amount Paid: $" + amount);
+        System.out.println("Client: " + clientName + ", Amount Paid: $" + amount);
     }
 
-    public List<Product> getProducts() {
-        return products;
+    public static void addToBlacklist(String clientName) {
+        blacklist.add(clientName);
     }
 
-    public Administrator() {
-        blackList = new ArrayList<>();
-        products = new ArrayList<>();
+    public static boolean isBlacklisted(String clientName) {
+        return blacklist.contains(clientName);
     }
 
-    public void addToBlackList(String clientName) {
-        blackList.add(clientName);
+    public static void addProductDescription(Product product, String description) {
+        product.setDescription(description);
     }
 
-    public boolean isBlackListed(String clientName) {
-        return blackList.contains(clientName);
-    }
-
-    public void registerSale(Sale sale) {
-        sale.registerSale();
-    }
 }
 
-// Класс, представляющий клиента магазина
 class Client {
     private String name;
-    private Order currentOrder;
+    private double money;
+    private Cart cart;
 
-    public Client(String name) {
+    public Client(String name, double money) {
         this.name = name;
+        this.money = money;
+        this.cart = new Cart();
     }
 
-    public void createOrder() {
-        currentOrder = new Order();
+    public void addProductToCart(Product product) {
+        cart.addProduct(product);
     }
 
-    public Order getCurrentOrder() {
-        return currentOrder;
-    }
-
-    public void addToOrder(Product product) {
-        currentOrder.addProduct(product);
-    }
-
-    public void removeFromOrder(Product product) {
-        currentOrder.removeProduct(product);
-    }
-
-    public double checkout() {
-        double totalPrice = currentOrder.calculateTotalPrice();
-        currentOrder.pay();
-        return totalPrice;
-    }
-
-    public String getName() {
-        return this.name;
+    public void pay() {
+        double totalPrice = cart.calculateTotalPrice();
+        if (totalPrice <= money) {
+            money -= totalPrice;
+            Administrator.registerPayment(name, totalPrice);
+        } else {
+            Administrator.addToBlacklist(name);
+            System.out.println("Client " + name + " doesn't have enough money " +
+                    "and has been added to the blacklist.");
+        }
     }
 }
 
-public class Task3 {
+public class Task3{
     public static void main(String[] args) {
-        Administrator admin = new Administrator();
+        Client client1 = new Client("Maria", 2000);
+        Client client2 = new Client("Vera", 50);
 
-        Product item1 = new Item("Ноутбук", 1000.0, "Мощный ноутбук для работы и игр");
-        Product item2 = new Item("Смартфон", 500.0, "Современный смартфон с хорошей камерой");
-        Product item3 = new Item("Планшет", 300.0, "Легкий и компактный планшет для чтения и просмотра видео");
+        Product product1 = new Product("Laptop", 1200);
+        Product product2 = new Product("Smartphone", 800);
 
-        admin.addProductInfo(item1);
-        admin.addProductInfo(item2);
-        admin.addProductInfo(item3);
+        Administrator.addProductDescription(product1,
+                "High-performance laptop with SSD storage.");
+        Administrator.addProductDescription(product2,
+                "Latest smartphone with dual-camera setup.");
 
-        // Проверяем, что информация о товарах добавлена успешно
-        List<Product> productList = admin.getProducts();
-        for (Product product : productList) {
-            System.out.println(product.getDescription());
-        }
+        client1.addProductToCart(product1);
+        client1.addProductToCart(product2);
 
-        Client client = new Client("Иван");
-        client.createOrder();
-        client.addToOrder(item1);
-        client.addToOrder(item2);
-        client.addToOrder(item3);
-        client.removeFromOrder(item3);
+        client2.addProductToCart(product1);
 
-        System.out.println("Before chekout (status isPaid): " + client.getCurrentOrder().isPaid());
-        double totalPrice = client.checkout();
-        System.out.println("Итоговая сумма заказа: $" + totalPrice);
-        System.out.println("After chekout (status isPaid): " + client.getCurrentOrder().isPaid());
+        client1.pay(); // Maria has enough money to pay for both products
+        client2.pay(); // Vera doesn't have enough money and will be blacklisted
 
-        Sale sale = new Sale(client.getCurrentOrder());
-        admin.registerSale(sale);
-        System.out.println("Is sale registered? -- " + sale.isRegistered());
+        // Checking if Vera is blacklisted
+        System.out.println("Is Vera blacklisted? " +
+                Administrator.isBlacklisted("Vera"));
 
-        admin.addToBlackList(client.getName());
-
-        boolean blackListed = admin.isBlackListed(client.getName());
-        if (blackListed) {
-            System.out.println(client.getName() + " находится в черном списке.");
-        }
+        // Retrieving product descriptions
+        System.out.println(product1.getName() + " Description: " + product1.getDescription());
+        System.out.println(product2.getName() + " Description: " + product2.getDescription());
     }
 }
-
