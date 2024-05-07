@@ -1,0 +1,7 @@
+London,101,Boeing 737,2024-04-02 08:00,Monday;Wednesday;Friday
+New York,102,Boeing 777,2024-04-03 10:00,Tuesday;Thursday;Saturday
+Paris,103,Airbus A320,2024-04-04 12:00,Monday;Wednesday;Friday
+London,104,Boeing 737,2024-04-05 14:00,Thursday;Saturday
+Tokyo,105,Boeing 777,2024-04-06 16:00,Tuesday;Thursday;Saturday
+Rome,106,Airbus A320,2024-04-07 18:00,Monday;Wednesday;Friday
+Madrid,107,Boeing 737,2024-04-08 20:00,Monday;Tuesday;Wednesday;Thursday;Friday;Saturday;Sunday
