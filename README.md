@@ -39,7 +39,7 @@
 |18|Оводок Вадим | [Vodemus](https://github.com/Vodemus) | [210667](./reports/Ovodok/)|✅|✅|✅|✅|✅|✅|✅|:x:|
 |19|Солышко Дмитрий |[dimasolyshko](https://github.com/dimasolyshko)|[210668](./reports/Solyshko/)|✅|✅|✅|✅|✅|:x:|:x:|:x:|
 |20|Ступак Дмитрий |[Papirosa225](https://github.com/Papirosa225) | [210669](./reports/)|✅|✅|✅|✅|:x:|:x:|:x:|:x:|
-|21|Тупик Юлия |[dljulia](https://github.com/dljulia)|[210670](./reports/Tupik/)|✅|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
+|21|Тупик Юлия |[dljulia](https://github.com/dljulia)|[210670](./reports/Tupik/)|✅|✅|:x:|:x:|:x:|:x:|:x:|:x:|
 |22|Тусюк Тимофей |[HuKtoHe3HaeT](https://github.com/HuKtoHe3HaeT)|[210671](./reports/)|:x:|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
 |23|Харитонович Захар |[ZakharTS](https://github.com/ZakharTS)|[210672](./reports/Kharytanovich/)|✅|✅|✅|✅|:x:|:x:|:x:|:x:|
 |24|Шубич Дарья|[Dashubaa](https://github.com/Dashubaa)|[210674](./reports/Shubich)|✅|✅|✅|✅|✅|✅|✅|:x:|
