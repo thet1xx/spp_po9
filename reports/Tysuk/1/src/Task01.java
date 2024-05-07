@@ -5,14 +5,13 @@ public class Task01 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Введите количество чисел N: ");
-        int n = scanner.nextInt();
+        int n = Integer.parseInt(args[0]);
 
         int[] numbers = new int[n];
 
         System.out.println("Введите " + n + " целых чисел:");
-        for (int i = 0; i < n; i++) {
-            numbers[i] = scanner.nextInt();
+        for (int i = 1; i < n; i++) {
+            numbers[i] = Integer.parseInt(args[i]);
         }
 
         int[] counts = new int[10];
@@ -31,3 +30,4 @@ public class Task01 {
         }
     }
 }
+
