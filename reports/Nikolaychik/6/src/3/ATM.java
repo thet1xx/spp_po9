@@ -1,30 +1,32 @@
 public class ATM {
-    public int ID;
-    static public int ID_COUNTER=0;
-    private double allMoney;
-    Mode mode=Mode.WAIT;
-
-    ATM(double allMoney) {
-        this.allMoney = allMoney;
+    private ATMState state;
+    private int totalCash;
+    public ATM(int totalCash) {
+        this.totalCash = totalCash;
+        this.state = new WaitingState(this);
     }
-
-    public double getAllMoney() {
-        return allMoney;
+    public void setState(ATMState state) {
+        this.state = state;
     }
-
-    public void setAllMoney(double allMoney) {
-        this.allMoney = allMoney;
+    public void insertCard() {
+        state.insertCard();
     }
-
-    public void setMode(Mode mode){
-        this.mode=mode;
+    public void enterPin(int pin) {
+        state.enterPin(pin);
     }
-
-    public Mode getMode() {
-        return mode;
+    public void withdrawCash(int amount) {
+        state.withdrawCash(amount);
     }
-
-    static public boolean Verivication_prototype(int PIN){
+    public void ejectCard() {
+        state.ejectCard();
+    }
+    public int getTotalCash() {
+        return totalCash;
+    }
+    public void setTotalCash(int totalCash) {
+        this.totalCash = totalCash;
+    }
+    public boolean getPin() {
         return true;
     }
 }
