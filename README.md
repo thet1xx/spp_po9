@@ -30,7 +30,7 @@
 |9|Кухарев Дмитрий |[Ian3707](https://github.com/Ian3707)|[210658](./reports/)|✅|✅|✅|✅|✅|:x:|✅|:x:|
 |10|Кучко Ярослав |[YaroslavKuchko26](https://github.com/YaroslavKuchko26)|[210659](./reports/)|✅|✅|:x:|:x:|:x:|:x:|:x:|:x:|
 |11|Лебедович Вадим|[thet1xx](https://github.com/thet1xx)|[210660](./reports/)|:x:|:x:|:x:|:x:|:x:|:x:|:x:|:x:|
-|12|Марзан Андрей | [Nenroin](https://github.com/Nenroin) | [210661](./reports/Marzan/)|✅|✅|✅|:x:|:x:|:x:|:x:|:x:|
+|12|Марзан Андрей | [Nenroin](https://github.com/Nenroin) | [210661](./reports/Marzan/)|✅|✅|✅|✅|✅|✅|✅|:x:|
 |13|Матюшик Екатерина |[Katriiiiiiinaaaa](https://github.com/Katriiiiiiinaaaa)|[210662](./reports/)|✅|:x:|✅|:x:|:x:|:x:|:x:|:x:|:x:|
 |14|Мельничук Владислав | [nikalow1](https://github.com/nikalow1) | [210663](./reports/) |✅|✅|✅|✅|:x:|:x:|:x:|:x:|
 |15|Мисиюк Алексей | [11ALX11](https://github.com/11ALX11) | [210664](./reports/Misijuk/) |✅|✅|✅|✅|✅|:x:|✅|:x:|
