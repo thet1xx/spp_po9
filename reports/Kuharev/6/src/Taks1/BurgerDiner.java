@@ -7,8 +7,70 @@ import java.util.Arrays;
 import java.util.List;
 
 public class BurgerDiner {
-    static void MakeOrder(Burger burger, Drink drink, Pack pack){
-        System.out.println("Total price: $" + ((double)burger.buy() + drink.selectDrink() + pack.choosePackage()));
+    static public class BurgerDinerBuilder {
+        private Pack pack;
+        private List<Burger> burgers;
+        private List<Drink> drinks;
+
+        public BurgerDinerBuilder() {
+            burgers = new ArrayList<>();
+            drinks = new ArrayList<>();
+        }
+
+        public BurgerDinerBuilder setPack(Pack pack) {
+            this.pack = pack;
+            return this;
+        }
+
+        public BurgerDinerBuilder addBurger(Burger burger) {
+            burgers.add(burger);
+            return this;
+        }
+
+        public BurgerDinerBuilder addDrink(Drink drink) {
+            drinks.add(drink);
+            return this;
+        }
+
+        public BurgerDiner build() {
+            return new BurgerDiner(pack, burgers, drinks);
+        }
+    }
+    static int order_number = 0;
+
+    Pack pack;
+    List<Burger> burgers;
+    List<Drink> drinks;
+    public BurgerDiner(Pack pack, List<Burger> burgers, List<Drink> drinks) {
+        this.pack = pack;
+        this.burgers = burgers;
+        this.drinks = drinks;
+    }
+    void getOrder(){
+        ++order_number;
+        System.out.println("Your order №00" + order_number + ":");
+        System.out.println("\nTotal price: $" + ((double)showBurgers() + (double) showDrinks() + (double)pack.choosePackage()));
+    }
+    public double showBurgers(){
+        double totalPrice = 0;
+        System.out.println("Burgers: ");
+        for(Burger burger : burgers){
+            //burger.showInfo();
+            totalPrice += burger.buy();
+        }
+        System.out.println();
+        return totalPrice;
+    }
+
+    public double showDrinks(){
+        double totalPrice = 0;
+        System.out.println("Drinks: ");
+        for(Drink drink : drinks){
+            //drink.showInfo();
+            totalPrice += drink.selectDrink();
+        }
+        System.out.println();
+        return totalPrice;
     }
     public static Burger[] fillBurgerList(){
         ChickenBurger chickenBurger = new ChickenBurger();
