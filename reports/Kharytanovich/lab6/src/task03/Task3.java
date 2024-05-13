@@ -2,10 +2,13 @@ package org.example.task03;
 
 public class Task3 {
     public static void main(String[] args) {
-        Printer printer = new TextPrinter();
-        printer.print();
+        PrinterContext context = new PrinterContext();
 
-        printer = new PhotoPrinter();
-        printer.print();
+        context.setStrategy(new TextPrintStrategy());
+        System.out.println(context.executePrint("Text text text text"));
+
+
+        context.setStrategy(new PhotoPrintStrategy());
+        System.out.println(context.executePrint("./photo.png"));
     }
 }
