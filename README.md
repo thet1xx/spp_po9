@@ -33,7 +33,7 @@
 |12|Марзан Андрей | [Nenroin](https://github.com/Nenroin) | [210661](./reports/Marzan/)|✅|✅|✅|✅|✅|✅|✅|:x:|
 |13|Матюшик Екатерина |[Katriiiiiiinaaaa](https://github.com/Katriiiiiiinaaaa)|[210662](./reports/)|✅|:x:|✅|:x:|:x:|:x:|:x:|:x:|:x:|
 |14|Мельничук Владислав | [nikalow1](https://github.com/nikalow1) | [210663](./reports/) |✅|✅|✅|✅|:x:|:x:|:x:|:x:|
-|15|Мисиюк Алексей | [11ALX11](https://github.com/11ALX11) | [210664](./reports/Misijuk/) |✅|✅|✅|✅|✅|:x:|✅|:x:|
+|15|Мисиюк Алексей | [11ALX11](https://github.com/11ALX11) | [210664](./reports/Misijuk/) |✅|✅|✅|✅|✅|✅|✅|:x:|
 |16|Николайчик Николай | [ProstoMyk](https://github.com/ProstoMyk) | [210665](./reports/Nikolaychik/) |✅|✅|✅|✅|✅|✅|✅|:x:|
 |17|Ничингер Кирилл |[HeyJIOBUM](https://github.com/HeyJIOBUM)|[210666](./reports/Nichinger/)|✅|✅|✅|✅|✅|✅|✅|:x:|
 |18|Оводок Вадим | [Vodemus](https://github.com/Vodemus) | [210667](./reports/Ovodok/)|✅|✅|✅|✅|✅|✅|✅|:x:|
