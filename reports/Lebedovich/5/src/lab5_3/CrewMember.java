@@ -1,6 +1,7 @@
 import java.lang.String;
-class CrewMember {
-    private String name;
+abstract class CrewMember {
+
+    protected String name;
 
     public CrewMember(String name) {
         this.name = name;
@@ -13,4 +14,6 @@ class CrewMember {
     public void setName(String name) {
         this.name = name;
     }
+
+    public abstract String getInfo();
 }

@@ -52,7 +52,7 @@ class Flight {
     public void displayFlightInfo() {
         System.out.println("Экипаж:");
         for (CrewMember member : crew) {
-            System.out.println(member.getClass().getName() + ": " + member.getName());
+            System.out.println(member.getInfo());
         }
 
         System.out.println("");
